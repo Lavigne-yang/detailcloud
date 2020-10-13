@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: microservice-provider
+    name: microservice-provider  #应用服务名
   #security:
   # user:
   #   name: admin
@@ -27,3 +27,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microservice-provider-product_1  #实例名
+info:   #监控配置
+  app.name: MICROSERVICE-PROVIDER
+  company.name: yc
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
