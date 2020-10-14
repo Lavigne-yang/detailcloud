@@ -25,6 +25,8 @@
 		<module>microservice-consumer2</module>
         <module>microservice-security</module>
         <module>microservice-eureka</module>
+	    <module>microservice-eureka2</module>
+	    <module>microservice-eureka3</module>
     </modules>
 
     <!-- 会实际下载jar包,子项目会继承这些依赖  -->

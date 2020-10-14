@@ -3,12 +3,6 @@ server:
 spring:
   application:
     name: microservice-provider  #应用服务名
-  #security:
-  # user:
-  #   name: admin
-  #  password: a
-  # roles:
-  #  - USER
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -24,13 +18,22 @@ logging:
   level:
     com.yc.springcloud812: debug
 eureka:
-  client:
+  client: # 客户端进行Eureka注册的配置
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://admin:a@eureka1:7001/eureka,
+                   http://admin:a@eureka2:7002/eureka,
+                   http://admin:a@eureka3:7003/eureka
   instance:
-    instance-id: microservice-provider-product_1  #实例名
+    instance-id: microservice-provider-product_1   #实例名
+    lease-expiration-duration-in-seconds: 90  #如果现在超过了5s的时间间隔( default: 90 s )
+    lease-renewal-interval-in-seconds: 30   #设置心跳的时间间隔( default:30s )
+
+
 info:   #监控配置
   app.name: MICROSERVICE-PROVIDER
   company.name: yc
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
+  build-version: $project.version$
+  java-version: $java.version$
