@@ -13,7 +13,8 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true    #将_转为驼峰命名
 mapper:
-  identity: MYSQL   # 标识列用mysql  配置主键自动增长
+  identity: MYSQL
+# 标识列用mysql  配置主键自动增长
 logging:
   level:
     com.yc.springcloud812: debug
