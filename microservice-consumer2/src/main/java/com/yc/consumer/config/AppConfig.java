@@ -1,6 +1,7 @@
 package com.yc.consumer.config;
 
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -14,8 +15,9 @@ import java.util.Base64;
 @Configuration
 public class AppConfig {
 
+    //-->Spring容器托管 “restTemplate”  RestTemplate对象
     @Bean //创建一个 restTemplate 的模板操作对象
-   // @LoadBalanced   //启用ribbon的客户端负载均衡
+    @LoadBalanced   //启用ribbon的客户端负载均衡   此处的负载均衡是全局配置( 针对当前的微服务)
     public RestTemplate restTemplate(){
 
         return new RestTemplate();

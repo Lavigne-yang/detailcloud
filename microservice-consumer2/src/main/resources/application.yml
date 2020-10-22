@@ -3,3 +3,11 @@ server:
 logging:
   level:
     com.yc.springcloud812: debug
+
+eureka:      #保证consumer能够服务发现
+  client:
+    register-with-eureka: false  #消费端不需要到eureka中注册
+    service-url:
+      defaultZone: http://admin:a@eureka1:7001/eureka,
+                   http://admin:a@eureka2:7002/eureka,
+                   http://admin:a@eureka3:7003/eureka

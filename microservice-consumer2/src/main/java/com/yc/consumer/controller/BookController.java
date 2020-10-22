@@ -18,7 +18,12 @@ import java.util.List;
 @RequestMapping("/consumer")
 public class BookController {
 
-    private final static String URL="http://localhost:8888/book/";
+    //private final static String URL="http://localhost:8888/book/";
+
+    //直接访问eureka中的服务名即可,这样 ribbon会拉取到服务实例列表，再利用负载均衡算法获取一个服务.
+    private final static String RESTURI="http://MICROSERVICE-PROVIDER/";
+    //                                   http://ip:port/
+
 
     @Autowired
     private RestTemplate restTemplate;
@@ -32,12 +37,12 @@ public class BookController {
         //return restTemplate.getForObject(URL+id,Book.class);
         //   HttpEntity(    MultiValueMap)   ,    HttpHeaders: MultiValueMap
         //   返回: ResponseEntity
-        return restTemplate.exchange( URL+id, HttpMethod.GET, new HttpEntity<Object>(httpHeaders), Book.class ).getBody();
+        return restTemplate.exchange( RESTURI+"book/"+id, HttpMethod.GET, new HttpEntity<Object>(httpHeaders), Book.class ).getBody();
     }
 
     @GetMapping("/findAll")
     public List<Book> findAll( ){
         // return restTemplate.getForObject(URL+"findAll",   List.class);
-        return restTemplate.exchange(URL+"findAll",HttpMethod.GET, new HttpEntity<Object>(httpHeaders), List.class).getBody();
+        return restTemplate.exchange(RESTURI+"book/"+"findAll",HttpMethod.GET, new HttpEntity<Object>(httpHeaders), List.class).getBody();
     }
 }
