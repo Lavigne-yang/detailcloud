@@ -1,6 +1,7 @@
 package com.yc.consumer.config;
 
 
+import com.netflix.loadbalancer.IRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,9 @@ public class AppConfig {
         return new RestTemplate();
     }
 
+
+    //private static Logger logger= Logger.getLogger(AppConfig.class);
+
     @Bean
     public HttpHeaders getHeaders(){
         HttpHeaders headers=new HttpHeaders();
@@ -33,6 +37,11 @@ public class AppConfig {
         //    Http请求头   Authorization: Base xxxxxxxxx
         headers.set("Authorization",authHeader);
         return headers;
+    }
+
+    @Bean
+    public IRule ribbonRule(){  //IRule所有规则的标准
+        return new com.netflix.loadbalancer.RandomRule();//随机的访问策略
     }
 
 }

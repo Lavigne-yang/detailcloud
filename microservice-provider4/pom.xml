@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-provider</artifactId>
-    <name>microservice-provider3</name>
+    <artifactId>microservice-provider4</artifactId>
+    <name>microservice-provider4</name>
 
     <!-- 从父项目继承-->
     <dependencies>

@@ -10,7 +10,6 @@ public class CApp {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(CApp.class ,args);
+		SpringApplication.run(CApp.class, args);
 	}
-
 }

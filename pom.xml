@@ -22,11 +22,13 @@
         <module>microservice-api</module>
         <module>microservice-provider</module>
         <module>microservice-consumer</module>
-		<module>microservice-consumer2</module>
+	    <module>microservice-consumer2</module>
         <module>microservice-security</module>
         <module>microservice-eureka</module>
 	    <module>microservice-eureka2</module>
 	    <module>microservice-eureka3</module>
+	    <module>microservice-provider4</module>
+	    <module>microservice-provider5</module>
     </modules>
 
     <!-- 会实际下载jar包,子项目会继承这些依赖  -->

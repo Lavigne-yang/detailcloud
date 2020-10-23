@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8885
 spring:
   application:
     name: microservice-provider  #应用服务名
@@ -26,7 +26,7 @@ eureka:
                    http://admin:a@eureka2:7002/eureka,
                    http://admin:a@eureka3:7003/eureka
   instance:
-    instance-id: microservice-provider-product_1   #实例名
+    instance-id: microservice-provider-product_5   #实例名
     lease-expiration-duration-in-seconds: 90  #如果现在超过了5s的时间间隔( default: 90 s )
     lease-renewal-interval-in-seconds: 30   #设置心跳的时间间隔( default:30s )
 
