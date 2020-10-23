@@ -39,9 +39,9 @@ public class AppConfig {
         return headers;
     }
 
-    @Bean
-    public IRule ribbonRule(){  //IRule所有规则的标准
-        return new com.netflix.loadbalancer.RandomRule();//随机的访问策略
-    }
+//    @Bean
+//    public IRule ribbonRule(){  //IRule所有规则的标准
+//        return new com.netflix.loadbalancer.RandomRule();//随机的访问策略
+//    }
 
 }
