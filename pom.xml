@@ -29,6 +29,8 @@
 	    <module>microservice-eureka3</module>
 	    <module>microservice-provider4</module>
 	    <module>microservice-provider5</module>
+	    <module>microservice-consumer-feign</module>
+        <module>microservice-interface</module>
     </modules>
 
     <!-- 会实际下载jar包,子项目会继承这些依赖  -->
@@ -96,6 +98,14 @@
                 <artifactId>microservice-security</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.yc.springcloud812</groupId>
+                <artifactId>microservice-interface</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>

@@ -1,4 +1,4 @@
-package com.yc.springcloud812.config;
+package com.yc.springcloud812.feign;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
