@@ -18,6 +18,7 @@ mapper:
 logging:
   level:
     com.yc.springcloud812: debug
+    org.springframework.security: debug
 eureka:
   client: # 客户端进行Eureka注册的配置
     service-url:
