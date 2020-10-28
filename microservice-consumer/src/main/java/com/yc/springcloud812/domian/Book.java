@@ -1,4 +1,4 @@
-package com.yc.consumer.domian;
+package com.yc.springcloud812.domian;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

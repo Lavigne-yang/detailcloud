@@ -1,5 +1,5 @@
 server:
-  port: 8989
+  port: 9527
 logging:
   level:
     com.yc.springcloud812: debug
@@ -11,3 +11,13 @@ eureka:      #保证consumer能够服务发现
       defaultZone: http://admin:a@eureka1:7001/eureka,
                    http://admin:a@eureka2:7002/eureka,
                    http://admin:a@eureka3:7003/eureka
+
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: # 可以被压缩的类型
+        - text/xml
+        - application/xml
+        - application/json
+      min-request-size: 2048 # 超过2048的字节进行压缩

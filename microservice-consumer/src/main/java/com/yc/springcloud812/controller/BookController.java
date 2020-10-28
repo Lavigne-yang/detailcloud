@@ -1,7 +1,7 @@
-package com.yc.consumer.controller;
+package com.yc.springcloud812.controller;
 
 
-import com.yc.consumer.domian.Book;
+import com.yc.springcloud812.domian.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

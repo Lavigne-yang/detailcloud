@@ -1,4 +1,4 @@
-package com.yc.consumer.config;
+package com.yc.springcloud812.config;
 
 
 import org.springframework.context.annotation.Bean;

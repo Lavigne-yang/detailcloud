@@ -1,0 +1,8 @@
+logging:
+  level:
+    com:
+      yc:
+        springcloud812:
+          service:
+            IProductClientService: DEBUG
+            #FeignClientConfig: DEBUG

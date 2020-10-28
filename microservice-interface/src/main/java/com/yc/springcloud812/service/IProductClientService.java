@@ -15,11 +15,11 @@ import java.util.List;
         configuration = FeignClientConfig.class)  // 配置要按自定义的类FeignClientConfig
 public interface IProductClientService {
 
-    @RequestMapping("/product/get/{id}") //这个springMVC的调用地址要与服务提供方要求的完全一样
-    public Book getProduct(@PathVariable("id")long id);
+    @RequestMapping("/book/{id}") //这个springMVC的调用地址要与服务提供方要求的完全一样
+    public Book getBook(@PathVariable("id")long id);
 
-    @RequestMapping("/product/list")
-    public List<Book> listProduct() ;
+    @RequestMapping("/book/findAll")
+    public List<Book> listBook() ;
 
 //    @RequestMapping("/product/add")
 //    public boolean addPorduct(Book product) ;

@@ -1,6 +1,6 @@
-package com.yc.consumer;
+package com.yc.springcloud812;
 
-import com.yc.consumer.robinConfiguration.RobinConfiguration;
+import com.yc.springcloud812.robinConfiguration.RobinConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;

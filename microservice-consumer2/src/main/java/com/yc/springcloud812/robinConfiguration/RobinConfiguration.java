@@ -1,4 +1,4 @@
-package com.yc.consumer.robinConfiguration;
+package com.yc.springcloud812.robinConfiguration;
 
 import com.netflix.loadbalancer.IRule;
 import org.springframework.context.annotation.Bean;

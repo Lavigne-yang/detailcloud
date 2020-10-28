@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>microservice-interface</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
@@ -22,6 +22,12 @@
         <dependency>
             <groupId>com.yc.springcloud812</groupId>
             <artifactId>microservice-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <!--  如是mysql5,要加入版本配置  -->
         </dependency>
     </dependencies>
 </project>
