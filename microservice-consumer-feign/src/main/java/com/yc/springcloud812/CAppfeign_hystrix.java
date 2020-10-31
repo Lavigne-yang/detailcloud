@@ -1,14 +1,12 @@
 package com.yc.springcloud812;
 
 import com.yc.springcloud812.robinConfiguration.RobinConfiguration;
-import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
 
 
 @EnableEurekaClient   //启用eureka客户端，这样能完成服务发现
@@ -19,11 +17,11 @@ import org.springframework.context.annotation.Bean;
 //多个不同的策略使用@RibbonClents(value="")
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableFeignClients("com.yc.springcloud812.service")  //注意:这里的值要填服务接口所在的包名,得到feigon接口通过动态代理生成代理对象
-public class CAppfeign {
+public class CAppfeign_hystrix {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(CAppfeign.class, args);
+		SpringApplication.run(CAppfeign_hystrix.class, args);
 	}
 //	@Bean
 //	Logger.Level feignLoggerLevel(){
