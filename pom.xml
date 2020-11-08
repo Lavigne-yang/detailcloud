@@ -35,6 +35,7 @@
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-provider-user-hystrix</module>
         <module>microservice-turbine</module>
+        <module>microservice-zuul-gateway</module>
     </modules>
 
     <!-- 会实际下载jar包,子项目会继承这些依赖  -->

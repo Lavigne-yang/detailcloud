@@ -1,0 +1,31 @@
+server:
+  port: 9501
+
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://admin:a@eureka1:7001/eureka,http://admin:a@eureka2:7002/eureka,http://admin:a@eureka3:7003/eureka
+    register-with-eureka: false      #暂时不注册
+
+spring:
+  application:
+    name:  microservice-zuul-gateway
+zuul:
+  #routes:    #路由配置
+   # microservice-provider-user:  /user-proxy/**
+  routes:
+    #user.path: /user-proxy/**
+    #user.serviceId: microservice-provider-user
+    user1:
+      path: /user1-proxy/**
+      serviceId: microservice-provider-user
+    user2: #传统的路由方式
+      path: /user2-proxy/**
+      url: http://localhost:5555/
+    product:
+      path: /product-proxy/**
+      serviceId: microservice-provider
+      sensitiveHeaders:
+  ignored-services:
+    "*"
+  prefix: /yc-api    #公共前缀
