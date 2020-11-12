@@ -18,4 +18,9 @@ public class FeignClientConfig {
     Logger.Level feignLoggerLevel(){
         return Logger.Level.FULL;
     }
+
+    //加入安全配置
+
+
+
 }

@@ -9,8 +9,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableCircuitBreaker
 @EnableEurekaClient
-public class PUserProviderApp {
+public class PUserProviderApp_hystrix {
     public static void main(String[] args) {
-        SpringApplication.run(PUserProviderApp.class,args);
+        SpringApplication.run(PUserProviderApp_hystrix.class,args);
     }
 }

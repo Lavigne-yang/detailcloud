@@ -17,4 +17,6 @@ public class Book {
     private BigDecimal bookPrice;
     private Date bookDate;
     private Integer userId;
+
+
 }
