@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri:  http://localhost:7101
+      name: microservice-config-product-client      #要从github上读取的配置文件名
+      profile:  beta     #激活的环境
+      label:  main     #git 分支
+      username: admin   #配置中心的用户名
+      password: a

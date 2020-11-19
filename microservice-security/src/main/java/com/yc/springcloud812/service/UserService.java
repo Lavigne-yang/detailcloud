@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 public class UserService implements UserDetailsService {
 
-    @Autowired
+    @Autowired(required = false)
     private UserMapper mapper;
 
     @Override

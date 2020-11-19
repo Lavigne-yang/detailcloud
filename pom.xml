@@ -23,19 +23,28 @@
         <module>microservice-provider</module>
 	<module>microservice-provider-hystrix</module>
         <module>microservice-consumer</module>
-	    <module>microservice-consumer2</module>
+	<module>microservice-consumer2</module>
         <module>microservice-security</module>
         <module>microservice-eureka</module>
-	    <module>microservice-eureka2</module>
-	    <module>microservice-eureka3</module>
-	    <module>microservice-provider4</module>
-	    <module>microservice-provider5</module>
-	    <module>microservice-consumer-feign</module>
+	<module>microservice-eureka2</module>
+	<module>microservice-eureka3</module>
+	<module>microservice-provider4</module>
+	<module>microservice-provider5</module>
+	<module>microservice-consumer-feign</module>
         <module>microservice-interface</module>
         <module>microservice-hystrix-dashboard</module>
         <module>microservice-provider-user-hystrix</module>
         <module>microservice-turbine</module>
         <module>microservice-zuul-gateway</module>
+        <module>microservice-config</module>
+	<module>microservice-config2</module>
+	<module>microservice-config3</module>
+        <module>microservice-config-client</module>
+	<module>microservice-config-eureka-client</module>
+	<module>microservice-config-provider-hystrix-client</module>
+	<module>microservice-config-eureka-center</module>
+        <module>microservice-config-bus</module>
+        <module>microservice-config-bus-client</module>
     </modules>
 
     <!-- 会实际下载jar包,子项目会继承这些依赖  -->

@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+
+      name: microservice-config-client      # 定义要读取的资源文件的名称即:    microservice-config-client.yml
+      profile: dev                        # 定义profile的 名称
+      label: main                         # 定义配置文件所在的分支
+      username: admin                     # 连接的用户名
+      password: a                         # 连接的密码
+
+
+      discovery:
+        enabled: true
+        service-id: MICROSERVICE-CONFIG
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:a@localhost:7301/eureka
